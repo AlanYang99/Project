@@ -1,1 +1,110 @@
 
+header {
+    font-size : 112px;
+    font-family : Courier;
+    text-align: center;
+    background-color :#87bdd8;
+    width : 800px;
+    margin: 0 auto 0em auto;
+    padding: 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+
+a {outline:0;}
+
+a:link, a:visited {
+  color: green;
+  padding: 0 1px;
+  text-decoration: none;
+}
+a:hover, a:active {
+  background-color: #9bf11e;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #333;
+}
+
+ nav {
+    background-color: #9bf11e;
+    font-size: 1.143em;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    text-align: center;
+    width: 800px;
+    margin: 0 auto 0em auto;
+    
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+ }
+
+p {
+	text-align: center;
+	margin-left: 200px;
+	margin-right: 200px;
+    background-color: #3cb371;
+    color: white;
+    border-style: solid;
+    border-width: 2px;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+}    
+
+
+.middle {
+	float: center;
+	width : 800px;
+	text-align: center;
+    margin: 0 auto 0em auto;
+    padding: 1px;
+    height: :900px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;    
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button1 {border-radius : 10px;}
+
+
+input {
+    width:600px;
+	padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid lightblue;
+    border-radius: 4px;	    
+}
+
+form, button {
+    display: inline-block;
+}
+
+p {
+    font-family: Gill Sans MT;
+    text-align: left;
+    margin : 0em;   
+    padding: 40px 0;     
+}
+

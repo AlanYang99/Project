@@ -1,63 +1,31 @@
 <!DOCTYPE html>
 <html>
-<style> 
+<body background = "background.jpg">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
+<header><strong>Hello</strong></header>
+<nav>
+    <a href = "#home">Home</a>  
+    <a href = "#new">New</a>
+    <a href = "#popular">Popular</a>    
 
-body {
-    background-color: #87CEEB;
-}
+</nav> 
 
-header {
-    font-size : 112px;
-    font-family : Courier;
-    text-align: center;
-    background-color: rgba(54, 98, 112, 0.8);
+<div class="row">
 
-}
-
-p {
-    border-style: solid;
-    border-color: #000000;
-    font-family: verdana;
-    font-size: 20px;
-    color: White;
-    background-color:rgba(88, 222 , 140, 0.9);
-    text-align: left;
-    white-space: nowrap;
-    margin : 0em;    
-}
-
-form, button {
-    display: inline-block;
-}
-
-nav {
-    text-align: center;
-    background-color: black;
-    font-size : 20px;
-}
-
-
-</style>
-    <b>
-    <nav text-align = center>
-        <a href = "#home">Home</a>  
-        <a href = "#new">New</a>
-        <a href = "#popular">Popular</a>    
-    </nav>           
-    <header>Hello</header>
- 
-    <hr>
-    </b>
-    <form>
-        <input type = "text">
+  <div  id = "div 1" class="column middle" style="background-color:#fff;">
+    <form id = "frm2">
+        <input type = "text" id = "comment" value ="Comment..."onfocus="if (this.value=='Comment...') this.value='';"/> 
     </form> 
-    <button type ="Post Message"> Post Message</button>
-    
-    <hr>
-    <body>
-        <p>My GPA is so low that it's got boots with the furs</p>
-        <p>My potted cactus died... I'm literally less nourishing than the desert</p>
-    </body>
+    <button type ="Post Message" class = "button button1" onclick = "deletePost()"> Post Message</button>
+	<H2>Posts<hr></H2>
 
+<div id = "newsfeed">
+    <p>My GPA is so low that it's got boots with the furs</p>
+    <p>My potted cactus died... I'm literally less nourishing than the desert</p>
+</div>
+
+<script src="app.js"></script>
+
+</body>
 </html>
