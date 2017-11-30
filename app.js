@@ -18,15 +18,24 @@ var config = {
 */
 
 
+//Gets current time
+
+
+
 //Get whats in database  
 var database = firebase.database();
-var ref = database.ref('messages');  
+var ref = database.ref('messages/');  
     ref.on("value", function(snapshot) {
         console.log(snapshot.val());
     }, function (error) {
         console.log("Error: " + error.code);
     }); 
 var messageBox = document.getElementById('newsfeed');
+var playersRef = firebase.database().ref("messages/");
+
+playersRef.orderByKey().on("child_added", function(data) {
+   console.log(data.key);
+});
 ref.on('child_added', snap=> {
     var paragraph = document.createElement("p");
     paragraph.innerText = snap.val(); 
@@ -44,14 +53,25 @@ ref.on('child_removed', snap => {
     paragraphRemove.remove();
 });
 
+/*
+timeRef.on('child_added', snap=> {
+var timeRef = database.ref('time/');    
+    var span = document.createElement("span");
+    span.innerText = snap.val(); 
+    span.id = snap.key;
+    messageBox.appendChild(span);
+     timeRef.push(utcDate);
+   
+ }); 
+*/
 //To save new data in database
 function save(add) {
-  var database = firebase.database();
-  var ref = database.ref('messages');  
-  messages = add;
-  ref.push(messages);
-
-
+    var database = firebase.database();
+    var ref = database.ref('messages');
+    var dt = new Date();
+    var utcDate = dt.toUTCString();    
+    messages = add;
+    ref.push(messages);
 }
 
 //To make new post on website
@@ -64,16 +84,17 @@ function deletePost() {
         alert("Please write a comment!");    
     } else {
         console.log(userinput);  
-        save(userinput);     
+        save(userinput);
+       
         document.getElementById("frm2").reset();
     }
 }
-
-
-  var messageBox = document.getElementById('newsfeed');
-
-
-
+/*
+        var small = document.createElement("span");
+        var node = document.createTextNode(utcDate);
+        para.appendChild(node);
+        var element = document.getElementById("newsfeed");  
+        element.appendChild(small);   
 
 /* My ex function when firebase was not introduced.
 function deletePost() {

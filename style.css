@@ -7,9 +7,8 @@ header {
     width : 800px;
     margin: 0 auto 0em auto;
     padding: 0;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 7px 7px 0px 0px;
+
 }
 
 
@@ -37,9 +36,6 @@ a:hover, a:active {
     width: 800px;
     margin: 0 auto 0em auto;
     
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
  }
 
 p {
@@ -58,14 +54,15 @@ p {
 
 .middle {
 	float: center;
-	width : 800px;
+	width : 798px;
 	text-align: center;
     margin: 0 auto 0em auto;
     padding: 1px;
-    height: :900px;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;    
+    height: :540px;
+    border-radius: 0px 0px 7px 7px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 540px;
 }
 
 .row:after {
@@ -108,3 +105,13 @@ p {
     padding: 40px 0;     
 }
 
+span {
+    font-size : 10px;
+}
+
+#left {
+    float: left;
+    text-align: left;
+    font-size: 24px;
+    font-family: courier;
+}
